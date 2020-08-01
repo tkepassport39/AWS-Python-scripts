@@ -31,8 +31,11 @@ def main():
                         ids.append(h["InstanceId"])
 
     # terminate the instances
-    terminateStatus = ec2machines.terminate_instances(InstanceIds = ids)
-    print(terminateStatus)
+    if not ids:
+        print("There are no Instances with KILL switch")
+    else:
+        terminateStatus = ec2machines.terminate_instances(InstanceIds = ids)
+        print(terminateStatus)
 
 
 if __name__ == "__main__":
