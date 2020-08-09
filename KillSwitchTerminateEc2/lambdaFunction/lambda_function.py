@@ -2,7 +2,6 @@ import json
 import boto3
 # setup region
 region = 'us-east-2'
-#instances = ['i-12345cb6de4f78g9h', 'i-08ce9b2d7eccf6d26']
 ec2 = boto3.client('ec2', region_name=region)
 # setup list for holding instance IDs
 ids =[]
