@@ -63,4 +63,4 @@ aws lambda add-permission --statement-id "TrustCWEToInvokeAutoEC2Termination" \
 ```
 
 ### You are all set! 
-You can try and test it out by adding to one of your instances Name tag value the "KILL" switch word. After a few seconds you should see your instance status change to stopping and eventually terminated.
+You can try and test it out by adding to one of your instances Name tag value the "KILL" switch word. After a few seconds you should see your instance status change to stopping and eventually terminated. You can check the cloudwatch logs for the activity of the lambda function. The cloudwatch log group name will be called something like "/aws/lambda/TestEc2Termination". There you go, you now have a serverless script setup to terminate EC2 instances.
